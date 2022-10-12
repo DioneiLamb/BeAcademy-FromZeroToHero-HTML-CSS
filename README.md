@@ -1,2 +1,3 @@
 # Paylivre-HTML
-Repositório para as aulas de HTML no boot camp from zero to hero da Be Academy
+Repositório para as aulas de HTML no boot camp from zero to hero da Be Academy.
+Iniciando a edição para praticar.
