@@ -1,29 +1,4 @@
-/* Conhecendo o CSS
-
-* Cascading Style Sheet
-* Está na 3ª versão
-* Se o HTMl é a estrutura o CSS é o estilo, o embelezamento
-* Não é uma linguagem de programação
-* Linguagem declarativa e de marcação
-
-Anatomia
-
-h2 {
-    font-weight: 700;
-    color: green;
-    font-size: 48px;
-}
-h2 é o seletor
-{ } recebem a declaração que são as propriedades (color) e valores (green)
-
-Seletores:
-* seletor global representados pelo asterisco (*)
-* seletores de elementos - h1, h2, p, div...
-* seletores usando identificação (id) - "#box, #container"...
-* seletores usando class - ".box, .container, .red"...
-* atributos selector, Pseudo-class, Pseudo-element, entre outros...
-
-*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
 p {
     color: #fff;
