@@ -1,69 +1,219 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entendendo CSS do bootcamp FromZeroToHero by Be Academy</title>
-    <!-- melhor maneira de usar a formatação CSS é elo link externo como abaixo -->
-    <link rel="stylesheet" href="./assets/style.css">
+<!--
+    Nesta página será apresentado o máximo do que foi mostrado nas aulas de CSS () 
+    Parece uma bagunça? Com certeza é! Porém tentei deixar alguns pontos importantes comentados =P
+
+Conhecendo o CSS
+    * Cascading Style Sheet
+    * Está na 3ª versão
+    * Se o HTMl é a estrutura o CSS é o estilo, o embelezamento
+    * Não é uma linguagem de programação
+    * Linguagem declarativa e de marcação
+
+    Anatomia
+    h2 {
+        font-weight: 700;
+        color: green;
+        font-size: 48px;
+    }
     
-    <!-- usando o <style> dentro da head mas pode ser colocado também dentro do <body> não é uma boa prática -->
-    <Style>
-        h1 {
-            font-weight: 50;
-            background: yellow;
-            color: green;
-            font-size: 48px;
-        }
-        
-        h2 {
-            border: 1px solid red;
-            margin: 32px;
-            padding: 24px;
-        }
-    </Style>
-
-</head>
-<body>
-
-    <h1>Eu sou um título</h1>
-    <h2>Subtítulo</h2>
-    
-    <p style="background:silver; color: blue; text-align: center; padding: 3%; border-radius: 10px;"> 
-        Subtítulo com formatação inline (direta no seletor). Não é uma boa prática.
-    </p>
-
-    <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, veritatis? 
-        Doloremque quisquam neque facilis dicta inventore, aliquam itaque sint corrupti magni nobis, asperiores cupiditate iure culpa, 
-        consectetur fuga ratione pariatur!
-    </p>
-
-    <!-- Conhecendo o CSS
-
-        * Cascading Style Sheet
-        * Está na 3ª versão
-        * Se o HTMl é a estrutura o CSS é o estilo, o embelezamento
-        * Não é uma linguagem de programação
-        * Linguagem declarativa e de marcação
-
-        Anatomia
-
-        h2 {
-            font-weight: 700;
-            color: green;
-            font-size: 48px;
-        }
-        h2 é o seletor
+    onde h2 é o seletor
         { } recebem a declaração que são as propriedades (color) e valores (green)
 
-        Seletores:
-        * seletor global representados pelo asterisco (*)
-        * seletores de elementos - h1, h2, p, div...
-        * seletores usando identificação (id) - "#box, #container"...
-        * seletores usando class - ".box, .container, .red"...
-        * atributos selector, Pseudo-class, Pseudo-element, entre outros...
-     -->
+    Seletores:
+    * seletor global representados pelo asterisco (*)
+    * seletores de elementos - h1, h2, p, div...
+    * seletores usando identificação (id) - "#box, #container"...
+    * seletores usando class - ".box, .container, .red"...
+    * atributos selector, Pseudo-class, Pseudo-element, entre outros...
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- graus de importância da folha de estilos inline . tag style . tag link  -->
+
+        <!-- melhor maneira de usar a formatação CSS é o link externo como abaixo -->
+        <!-- 3° grau de importância / deve ser usado preferencialmente esse modo -->
+        <link rel="stylesheet" href="./assets/style.css">
+        
+        <!-- usando o <style> dentro da head mas pode ser colocado também dentro do <body> não é uma boa prática -->
+        <!-- 2° grau de importância / pode acontecer -->
+        <style>
+            h1 {
+                background: blue;
+            }
+            h2 {
+                color: yellow;
+                border: 1px solid red;
+                margin: 32px;
+                padding: 24px;
+            }
+            
+            </style>
+
+    <title>Fluxo de leitura e especificidade</title>
+</head>
+<body>
+        <div>
+            <!-- 1° grau de importância sendo o + forte a formatação direto na tag / usar quando muito necessário-->
+            <h1 style="background:silver; color: blue; text-align: center; padding: 3%; border-radius: 10px;">eu sou um titulo testando a importância dos estilos</h1>
+        </div>
+        <h2>Subtítulo</h2>
+        <!-- 
+            * Especificidade
+        
+
+            Cálculo matemático desenvolvido automaticamente pela regra css, onde cada tipo de seletor e origem do estilo possuem valores a serem considerados
+            0. Universal selector, combinator e pseudo-class (:not())
+            1. Elementos do tipo seletor e pseudo-elementos (::before, ::after)
+            10. Classes e atributos de seletores {[type="radio"]}
+            100. Seletor ID
+            1000. Inline
+        -->
+
+            <!-- 
+            Nos próximos testes haverá formatação direta antes do exercício proposto
+        -->
+
+    <style>
+        h1 {
+            background: blue;
+        }
+    
+        #super-title {
+            background: #cfc;
+        }
+        .my-title {
+            background: magenta;
+        }
+
+        h1 {
+            background: green;
+        }
+
+        strong {
+            color: blueviolet;
+        }
+
+        /* posso colocar assim pra ir em todos os strongs da p
+        p strong {
+            color:cornflowerblue;
+        } */
+
+        .my-text {
+            background-color: bisque;
+            color: cadetblue;
+        }
+
+        .my-text strong {
+            color: rgb(24, 61, 61);
+        }
+    </style>
+
+
+    <h1 id="super-title">titulo com id / super-title</h1>
+    <p><strong>Lorem ipsum</strong> Essa tag &lt; strong &gt; recebe a cor blueviolet  ! <br>
+        O restante do paragrafo recebe a formatação importada com a cor green <br>
+        Diferente do próximo paragrafo, logo após o próximo título
+    </p>
+    
+    <h3 class="my-title">titulo com class / my class</h3>
+    <p class="my-text">Este parágrafo recebea formatação da classe my-text!
+        <br>
+        <strong>Quae excepturi repudiandae</strong> optio neque minus ut fugiat! <br>
+        Provident accusantium magnam, enim incidunt veniam voluptas tenetur?
+    </p>
+
+    <style>
+        body ul li {
+            background: green;
+            color: red;
+        }
+
+        /* descendente combinator */
+        body section div ul li {
+            background: blue;
+            color: yellow;
+        }
+    
+        /* decendent child / vai direto a quem quero laterar depois do pai*/
+        body > ul {
+            background-color:darkturquoise; /* primeiro marcador */
+        }    
+    </style>
+    
+    <p>teste de cominações / primeiro formato</p>
+     <ul>
+        <li>primeiro marcador</li>
+    </ul>
+ 
+    <p>Outro formato</p>
+    <section>
+        <div>
+            <ul>
+                <li>segundo marcador</li> <!-- recebe o combinator -->
+            </ul>
+        </div>
+    </section>
+
+    <!-- testando o + (mais) pega o primeiro irmão após o definido
+         e ~ (til) que pega todos os irmãos do mesmo tipo -->
+    <style>
+        
+        h1 + p {
+            color: green;
+        }
+        
+        p ~ button {
+            background-color: #cfc;
+            color: orange;
+        }
+    </style>
+
+    <h1>Título</h1>
+
+    <p>paragrafo mais perto do titulo</p>
+
+        <p>paragrafo irmão do paragrafo anterior</p>
+        
+        <button>Botão Enviar nº 1</button>
+        <button>Botão Enviar nº 2</button>
+        <br><br><br><br><br><br><br><br><br><br>
+    <!-- 
+        Colocando cores e imagens no bakground
+        Acabei colocando as informações no arquivo externo
+        Mas poderia ter sido assim se qeu quisese colocar em um ponto específico da página ;)
+
+        <style>
+            .bg-box {
+                width: 600px;
+                height: 600px;
+                border: 5px salmon solid;
+                border-radius: 10px;
+                padding: 16px;
+                /* 
+                    Imagem de fundo descrita por partes
+                    background-image: url("https://source.unsplash.com/random");
+                    background-size: 20%;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-origin: content-box;
+                    background: radial-gradient(rgb(236, 79, 236), rgba(252, 228, 16, 0.788));
+                */
+    
+                /* Imagem de fundo descrita tudo junto (shorthand)  */
+                background: url("https://source.unsplash.com/random") no-repeat center center / 75% content-box, linear-gradient(rgba(146, 209, 228, 0.726), rgba(219, 233, 219, 0.644));
+            }
+        </style>
+        <div class="container">
+            <div class="bg-box"></div>
+        </div>
+        -->
+
 </body>
+
 </html>

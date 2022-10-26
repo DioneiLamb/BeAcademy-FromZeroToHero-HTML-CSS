@@ -1,0 +1,104 @@
+<!-- 
+    Existe 5 tipos de position
+    * static (por padrão o navegar já coloca nesse)
+    * relative (mantem o espaçõ onde é deslocado o objeto)
+    * fixed
+    * absolut (fica absoluto no escopo global)
+    * sticky
+-->
+    <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox / Grid Layout</title>
+
+    <style>
+    /* 
+        body {
+            background: rgb(103, 200, 245);
+
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: auto;
+            justify-content: center;
+            gap: 12px;
+        } 
+    */
+
+        main {
+            position: relative;
+            background-color: yellow;
+            margin-top: 50px;
+        }
+        .box {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 600px;
+        }
+        /* Estes box abaixo já vão herdar o tamnho definido acima / isso se chama herança de classe (chic!) */
+        .box-1 {
+            background: red;
+            position: relative;
+            /* ao selecionar o relative , destrava as opções top / left / right / botton */
+            top: 100px;
+            left: 100px;
+        }
+
+        .box-2 {
+            background: blue;
+            position: absolute;  /*  está sendo relativo a minha caixa main / só vai funcionar se o pai var ser relative */
+            left: 150px;
+            top: 25px;
+        }
+
+        .box-3 {
+            background:green;
+        }
+        
+        .box-4 {
+            background:magenta;
+            position: fixed; /* deixa o objeto fixo na tela (dá pra usar num menu...)*/
+            top: 25px;
+            left: 250px;
+        }
+        .box-5 {
+            background: rgb(151, 98, 175);
+            position: absolute;
+            left: 10px;
+            top: 50px;
+            z-index: 3; /* pode ser trocado a possição dele */
+        }
+        .box-6 {
+            background: rgba(151, 29, 29, 0.767);
+            position: absolute;
+            left: 15px;
+            top: 55px;
+        }
+        .box-7 {
+            background: #cfc;
+            position: absolute;
+            left: 20px;
+            top: 60px;
+        }
+        </style>
+
+</head>
+<body>
+    
+    <main>
+        <div class="box box-1"></div>
+        <div class="box box-2"></div>
+        <div class="box box-3"></div>
+        <div class="box box-4"></div>
+        <div class="box box-5"></div>
+        <div class="box box-6"></div>
+        <div class="box box-7"></div>
+    </main>
+
+</body>
+</html>

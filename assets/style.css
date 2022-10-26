@@ -1,7 +1,40 @@
+
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
+
+body {
+    /* background: silver; */
+    background: url("https://source.unsplash.com/random") no-repeat center center / 75% content-box, linear-gradient(rgba(137, 245, 111, 0.726), rgba(224, 110, 196, 0.877));
+}
+
+h1 h2 h3 {
+    color: chocolate;
+}
+
 p {
-    color: #fff;
-    background: #2f4f4f;
+    color: rgb(22, 21, 21);
+    background: #b7f3f3;
     padding: 3%;
+}
+
+body::-webkit-scrollbar-button {
+    background: magenta;
+}
+
+body::-webkit-scrollbar {
+    width: 50px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #cfc;
+}
+
+/* body::-webkit-scrollbar-track-piece {
+    background: #fff;
+} */
+
+body::-webkit-scrollbar-thumb {
+    background: yellowgreen;
+    border-radius: 6px;
 }
