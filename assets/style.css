@@ -1,11 +1,14 @@
 
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
 
 body {
+    /* background-color: red; For browsers that do not support gradients */
+    /* background-image: linear-gradient(red, yellow 10%, green 20%); */
+    /* background-image: repeat-linear-gradient(red, yellow, green); */
     /* background: silver; */
-    background:  linear-gradient(rgba(137, 245, 111, 0.726), rgba(224, 110, 196, 0.877)), no-repeat; 
+    background:  linear-gradient(rgba(137, 245, 111, 0.726), rgba(224, 110, 196, 0.877));
+    background-attachment: fixed;
     /* 
     colocando uma imagem aleatória com algumas definições
     url("https://source.unsplash.com/random") no-repeat center center / 75% content-box 
