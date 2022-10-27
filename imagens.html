@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Imagens</title>
+</head>
+<body>
+    <!--
+        A  tag <img> é um elemento vazio. Em outras palavras, é um elemento que abre e fecha por si só. Dentro dela serão colocados atributos
+        responsáveis por manter a imagem na tela. A tag <img>, também pode ser usada referenciando a links externos -->
+    
+    <!-- ---------- sem semantica ----------- -->
+    <div>
+        <img
+        src="https://source.unsplash.com/random"
+        alt="Imagem aleatória sem semântica"
+        title="Imagem aleatória sem semântica"
+        />
+        <p>
+            Isso é um título para imagem sem semântica
+        </p>
+    
+    </div>
+<br><br><br>
+    <!-- ---------- com semantica ----------- -->
+    <figure>
+        <img
+        src="https://source.unsplash.com/random"
+        alt="Imagem aleatória com semântica"
+        title="Imagem aleatória com semântica"
+        width="300px"
+        height="auto"
+        />
+        <figcaption>
+            Isso é um título para imagem com semântica
+        </figcaption>
+    </figure>
+<br><br><br>
+    <!-- ---------- usando uma imagem . SVG ----------- -->
+    <figure>
+        <img
+        src="./imagens/undraw_ready_for_waves_vlke.svg"
+        alt="Imagem em formato SVG"
+        title="Imagem em formato SVG"
+        />
+        <figcaption>
+            Isso é um título da minha imagem em SVG
+        </figcaption>
+    </figure>
+</body>
+</html>

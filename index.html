@@ -11,50 +11,89 @@
 <body>
     <h1>Introdução ao Curso HTML</h1>
 
-    <ul>
-    <li>
-        <a href="#link1" title="O que é HTML">HTML - O que é HTML</a>
-    </li>
-    <li>HTML - Atributos e Atributos Globais</li>
-    <li>HTML - Aninhamento de Tags e Caractere Reservado</li>
-    <li>HTML - Autonomia de um documento e Semântica</li>
-    <li>HTML - Títulos e Parágrafos</li>
-    <li>HTML - Listas Ordenadas e não ordenadas e Citações</li>
-    <li>HTML - Abreviação e Elementos</li>
-    <li>HTML - Links</li>
-    <!--
-        <a href="#lugar de destino">Usar o # e o destino na mesma página. Usar id="" no lugar definido com # </a>
-        <a href="pag1.html" target="_blank">Abre em outra janela </a>
-        <a href="pag2.html" target="_self">Abre na mesma janela </a>
-        <a href="pag3.html">Abre na mesma janela </a> 
-    -->
-    <li>HTML - Navegação entre diretórios</li>
-    <li>HTML - Tabelas</li>
-    <li>HTML - Imagens</li>
-    <li>HTML - Imagens SGV</li>
-    <li>HTML - Formulários - Button</li>
-    <li>HTML - Formulários - Label e Datalist</li>
-    <li>HTML - Formulários - Input (text, number e Email)</li>
-    <li>HTML - Formulários - Input ( Input (password, hidden, color e date))</li>
-    <li>HTML - Formulários - Input (check, radio)</li>
-    <li>HTML - Formulários - Input (select, search e file)</li>
-    <li>HTML - Formulários - Textarea e Optgroup</li>
-    <li>HTML - SEO</li>
-</ul>
+    <ol>
+        <li>
+            <a href="#link1" title="O que é HTML">HTML - O que é HTML</a>
+        </li>
+        <li>HTML - Atributos e Atributos Globais</li>
+        <li>HTML - Aninhamento de Tags e Caractere Reservado</li>
+        <li>HTML - Autonomia de um documento e Semântica</li>
+        <li>HTML - Títulos e Parágrafos</li>
+        <li>HTML - Listas Ordenadas e não ordenadas e Citações</li>
+        <li>HTML - Abreviação e Elementos</li>
+        <li>HTML - Links</li>
+        <!--
+            <a href="#lugar de destino">Usar o # e o destino na mesma página. Usar id="" no lugar definido com # </a>
+            <a href="pag1.html" target="_blank">Abre em outra janela </a>
+            <a href="pag2.html" target="_self">Abre na mesma janela </a>
+            <a href="pag3.html">Abre na mesma janela </a> 
+        -->
+        <li>HTML - Navegação entre diretórios</li>
+        <li>
+            <a href="./tabelas.html" title="Um pouco sobre Tabelas"> HTML - Tabelas</a>
+        </li>
+        <li>
+            <a href="./imagens.html" title="Um pouco sobre imagens"> HTML - Imagens</a>
+        </li>
+        <li>
+            <a href="#link11" title="Uma imagem em formato SVG na mesma página">HTML - Imagens SGV</a></li>
+        <li>
+            <a href="./formulario.html"> HTML - Formulários - Button</a></li>
+        <li>HTML - Formulários - Label e Datalist</li>
+        <li>HTML - Formulários - Input (text, number e Email)</li>
+        <li>HTML - Formulários - Input ( Input (password, hidden, color e date))</li>
+        <li>HTML - Formulários - Input (check, radio)</li>
+        <li>HTML - Formulários - Input (select, search e file)</li>
+        <li>HTML - Formulários - Textarea e Optgroup</li>
+        <li>HTML - SEO</li>
+    </ol>
 
-<br><br><br><br><br><br><br><br><br><br>
 
+<!-- ---------------- começando --------------- -->
 <h2 id="link1">HTML - O que é HTML</h2>
 <p>
     HTML (abreviação para a expressão inglesa HyperText Markup Language, que significa: "Linguagem de Marcação de Hipertexto") 
     é uma linguagem de marcação utilizada na construção de páginas na Web. Documentos HTML podem ser interpretados por navegadores.
 </p>
 
-<br><br><br><br><br><br><br><br><br><br>
+<!-- ---------------- fazendo listas -------------- 
+    Listas podem ser ordenadas usando <ol> e não ordenadas usando <ul> os <li> são os "topicos" ou "itens" das listas 
+    -->
+<h2>Ingredientes para Bolo de Cenoura / <br> Em formato de lista não ordenada e ordenada</h2>
+<ul>
+    <li>3 cenoura médias (250g)</li>
+    <li>4 ovos</li>
+    <li>Meia xicara (chá) de óleo</li>
+    <li>2 e meia xícaras (chá) de farinha de trigo</li>
+    <li>2 xícaras (chá) de açucar</li>
+    <li>1 colher (sopa) de fermento em pó</li>
+</ul>
+<ol>
+    <li>3 cenoura médias (250g)</li>
+    <li>4 ovos</li>
+    <li>Meia xicara (chá) de óleo</li>
+    <li>2 e meia xícaras (chá) de farinha de trigo</li>
+    <li>2 xícaras (chá) de açucar</li>
+    <li>1 colher (sopa) de fermento em pó</li>
+</ol>
 
-<h1>
+<br><br><br>
+
+<!-- ----------- figura em formato SVG --------------- -->
+    <figure id="link11">
+        <img
+        src="./imagens/undraw_ready_for_waves_vlke.svg"
+        alt="Imagem em formato SVG"
+        title="Imagem em formato SVG"
+        />
+        <figcaption>
+            Isso é um título da minha imagem em SVG
+        </figcaption>
+    </figure>
+
+<h2>
     <a href="entendendoCss.html">Introdução ao Curso CSS</a>
-</h1>
+</h2>
 
 </body>
 </html>
