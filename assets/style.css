@@ -1,4 +1,5 @@
-
+/* ------------ Sobre medidas
+quando usar rem ele é relativo ao tamnho do root pra calcular vc pode pegar o valor que vc quer  em px e dividir pelo tamnho da rem. Ex: 32px (que eu quero) / 15px (tamanho rrot meu pc) = 2,13rem */ 
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
@@ -17,6 +18,7 @@ h1 h2 h3 {
 }
 
 p {
+    font-size: 1.1rem; /* alterado o tamanho da fonte pra maior*/
     color: rgb(22, 21, 21);
     background: #b7f3f3;
     padding: 3%;

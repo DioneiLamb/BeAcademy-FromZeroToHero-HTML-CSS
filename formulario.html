@@ -23,32 +23,100 @@
         <button type="button" name="" class="" id="" onclick="alert('VC me apertou! Que legal!!')">Eu sou um botão</button>
         <button type="reset">reset</button>
         <button type="submit">submit</button>
-    
-        <!-- 
-        tipos de input    
-            
-        <input type="button">
-        <input type="checkbox">
-        <input type="color">
-        <input type="date">
-        <input type="datetime-local">
-        <input type="email">
-        <input type="file">
-        <input type="hidden">
-        <input type="image">
-        <input type="month">
-        <input type="number">
-        <input type="password">
-        <input type="radio">
-        <input type="range">
-        <input type="reset">
-        <input type="search">
-        <input type="submit">
-        <input type="tel">
-        <input type="text">(valor padrão)
-        <input type="time">
-        <input type="url">
-        <input type="week"> -->
+        <br><br><br>
+        <!--------- sobre labels ------------>
+        <!-- associar e identificar um ou mais tag de entrada de dados / ajuda bastante na acessibilidade / Atributos são usados pra fazer conexão com outros tipos de elemento do formlário -->
+        <label>
+            Nome
+            <input type="text" id="nome">
+        </label> <!--forma mais usada-->
+        <label for="age">Idade</label>
+        <input type="number" name="" id="age"> <!--fazendo conexão com o lebal acima-->
+
+        <!-------------- sobre datalist ------------>
+        <!-- datalist são sugestões para algum elemento input / usuário poderá selecionar um dos valores / NÃO SÃO TODOS OS NAVEGADORES QUE ACEITAM-->
+        <datalist id="prof-list">
+            <option>Dionei</option>
+            <option>Rogério</option>
+            <option>Lamb</option>
+        </datalist>
+        <input type="text" list="prof-list" placeholder="Escolha o nome">
+        <br></br>
+
+        <fieldset>
+            <legend> trabalhando com inputs </legend>   
+                <!-- <input type="button">
+                <input type="checkbox">
+                <input type="color">
+                <input type="date">
+                <input type="datetime-local">
+                <input type="email">
+                <input type="file">
+                <input type="hidden">
+                <input type="image">
+                <input type="month">
+                <input type="number">
+                <input type="password">
+                <input type="radio">
+                <input type="range">
+                <input type="reset">
+                <input type="search">
+                <input type="submit">
+                <input type="tel">
+                <input type="text">(valor padrão)
+                <input type="time">
+                <input type="url">
+                <input type="week"> -->
+                
+                <input 
+                type="text"
+                placeholder="Preencha seu nome"
+                size="50%"
+                title="input tipo text"
+                minlength="8"
+                maxlength="16"
+                >
+                <br><br>
+
+                <input type="checkbox">
+                <label> I have a bike</label><br>
+                <input type="checkbox">
+                <label> I have a car</label><br>
+                <input type="checkbox">
+                <label> I have a boat</label>
+                <br><br>
+                <form>
+                    <label for="gsearch">Pesquise no Google:</label>
+                    <input type="search" id="gsearch" name="gsearch">
+                  </form>
+                
+                <br></br>
+                <label for="pwd">Password:</label>
+                <input type="password" id="pwd" name="pwd"
+                pattern=".{8,}"
+                title="Mínimo 8 characteres">
+        </fieldset>
     </form>
+    
+    <!------------ trabalhando com o texte area---------------->
+    <p>trabalhando com o textearea e select<br>
+    <textarea name="" id="" cols="30" rows="10" placeholder="Preencha o quanto vc puder"></textarea>
+
+
+    <!------------ trabalhando com o select---------------->
+    <label>Escolha uma opção</label>
+        <select name="nome" multiple size="5">
+            <optgroup label="professores">
+                <option value="Luan">Luan</option>
+                <option value="Regis">Regis</option>
+                <option value="Jenifefr">Jenifer</option>
+            </optgroup>
+            <optgroup label="Curso">
+                <option value="">Front-end</option>
+                <option value="">Design</option>
+                <option value="">DevOps</option>
+            </optgroup>
+        </select>
+    <p>
 </body>
 </html>
