@@ -1,12 +1,19 @@
+<<<<<<< HEAD
 /* ------------ Sobre medidas
 quando usar rem ele é relativo ao tamnho do root pra calcular vc pode pegar o valor que vc quer  em px e dividir pelo tamnho da rem. Ex: 32px (que eu quero) / 15px (tamanho rrot meu pc) = 2,13rem */ 
+=======
+>>>>>>> 71ff3a02090c18f5b3ab2e68c1f037a9c139d1f0
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
 
 body {
+    /* background-color: red; For browsers that do not support gradients */
+    /* background-image: linear-gradient(red, yellow 10%, green 20%); */
+    /* background-image: repeat-linear-gradient(red, yellow, green); */
     /* background: silver; */
-    background:  linear-gradient(rgba(137, 245, 111, 0.726), rgba(224, 110, 196, 0.877)), no-repeat; 
+    background:  linear-gradient(rgba(137, 245, 111, 0.726), rgba(224, 110, 196, 0.877));
+    background-attachment: fixed;
     /* 
     colocando uma imagem aleatória com algumas definições
     url("https://source.unsplash.com/random") no-repeat center center / 75% content-box 
